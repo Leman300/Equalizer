@@ -1,0 +1,23 @@
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.equalizer {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	gap: 5px;
+	width: 25em;
+	height: 25em;
+	margin-bottom: 2em;
+}
+
+.equalizer div {
+	background-color: transparent;
+	border: 1px solid black;
+}

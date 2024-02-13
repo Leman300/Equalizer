@@ -5,6 +5,7 @@ body {
 	align-items: center;
 	height: 100vh;
 	margin: 0;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .equalizer {
@@ -20,4 +21,134 @@ body {
 .equalizer div {
 	background-color: transparent;
 	border: 1px solid black;
+}
+
+.bottom {
+	padding: 2em;
+	max-width: 500px;
+	width: 100%;
+}
+
+.controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	background-color: #f5f5f5;
+	padding: 1.2em;
+	border-radius: 15px;
+}
+
+.controls .toggle-btn {
+	width: 3.6em;
+	height: 2.4em;
+	font-size: 1.4rem;
+	border-radius: 8px;
+	border: none;
+	color: #fff;
+	background-color: rgb(98, 226, 93);
+	transition: background-color 0.3s;
+	box-shadow: 0 0 5px solid #000;
+	cursor: pointer;
+}
+
+.controls .toggle-btn:hover {
+	background-color: rgb(138, 252, 134);
+}
+
+.volume-slider,
+.seek-slider {
+	width: 100%;
+	height: 10px;
+	appearance: none;
+	background: #ddd;
+	border-radius: 5px;
+	outline: none;
+	opacity: 0.7;
+	transition: opacity 0.2s;
+	cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb,
+.seek-slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #4caf50;
+	cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb,
+.seek-slider::-moz-range-thumb {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #4caf50;
+	cursor: pointer;
+}
+
+.volume-slider:hover,
+.seek-slider:hover {
+	opacity: 1;
+}
+
+.seek-slider {
+	width: 50%;
+}
+
+.sound {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sound .mute-button {
+	margin-right: 0.8em;
+	border: none;
+	background-color: transparent;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.time-label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 8.5em;
+}
+
+.uploadBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.audioFileInput {
+	display: none;
+}
+
+.audioFileInput-label {
+	display: inline-block;
+	background-color: #f5f5f5;
+	font-size: 1.6rem;
+	padding: 0.6em 1.2em;
+	border-radius: 8px;
+	transition: background-color 0.3s, color 0.3s;
+	cursor: pointer;
+	font-weight: 400;
+	color: rgb(98, 226, 93);
+}
+
+.audioFileInput-label .fa-arrow-up-from-bracket {
+	margin-right: 0.5em;
+	font-size: 1.5rem;
+	font-weight: thin;
+}
+
+.audioFileInput-label:hover {
+	background-color: rgb(98, 226, 93);
+	color: #f5f5f5;
 }

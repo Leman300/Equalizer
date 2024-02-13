@@ -9,12 +9,35 @@
     <meta name="keywords" content="music, music equalizer, music animations">
     <title>Music Equalizer</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a8f7fa168e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="equalizer"></div>
-    <input type="file" class="audioFileInput">
-    <audio class="audioPlayer" controls></audio>
+    <audio class="audioPlayer">Upload file</audio>
+
+    <div class="bottom">
+        <div class="controls">
+            <button class="toggle-btn fas fa-play"></button>
+
+            <div class="sound">
+                <button class="mute-button fa-solid fa-volume-high"></button>
+                <input type="range" class="volume-slider" min="0" max="100" value="100">
+            </div>
+
+            <input type="range" class="seek-slider" min="0" max="100" value="0">
+            <label class="time-label">0:00 / 0:00</label>
+        </div>
+    </div>
+
+    <div class="uploadBox">
+        <input type="file" id="audioFileInput" class="audioFileInput">
+        <label class="audioFileInput-label" for="audioFileInput"><i class="fa fa-arrow-up-from-bracket"></i> Upload
+            file</label>
+    </div>
 
     <script src="script.js"></script>
 </body>
